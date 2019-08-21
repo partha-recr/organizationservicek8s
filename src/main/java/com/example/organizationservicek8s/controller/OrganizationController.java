@@ -85,4 +85,14 @@ public class OrganizationController {
 		}
 	}
 	
+	@GetMapping("/org/dept")
+	public String getFromOrg() {
+		return "Return From ORG:::"+departmentClient.getFromDept();
+	}
+	
+	@GetMapping("/org/emp")
+	public String getFromOEmp() {
+		return "Return From ORG:::"+employeeClient.getStringFromEmployee();
+	}
+	
 }
