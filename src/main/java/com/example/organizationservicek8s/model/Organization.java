@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Organization {
@@ -15,7 +16,9 @@ public class Organization {
 	private int id;
 	private String name;
 	private String address;
+	@Transient
 	private List<Department> departments = new ArrayList<>();
+	@Transient
 	private List<Employee> employees = new ArrayList<>();
 
 	public Organization() {
