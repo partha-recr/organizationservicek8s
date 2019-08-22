@@ -94,5 +94,10 @@ public class OrganizationController {
 	public String getFromOEmp() {
 		return "Return From ORG:::"+employeeClient.getStringFromEmployee();
 	}
+	@GetMapping("/")
+	public String health() {
+		LOGGER.info("Employee find");
+		return "Hello Home ORG";
+	}
 	
 }
